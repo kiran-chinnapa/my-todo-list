@@ -1,21 +1,19 @@
 import { Component } from '@angular/core';
-import { DefaultTaskServiceService } from './service/default-task-service.service';
+import { DefaultTaskServiceService } from '../service/default-task-service.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'mytask-root',
+  templateUrl: './my-tasks.component.html',
+  styleUrls: ['./my-tasks.component.css'],
 })
-export class AppComponent {
+export class MyTasksComponent {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
-  // public default_tasks = ['default_task1', 'default_task2'];
-  /* An empty array that is responsible
-	to add a division */
-
   public defaultTaskService = new DefaultTaskServiceService();
 
+  /* An empty array that is responsible
+	to add a division */
   public items: string[] = this.defaultTaskService.getDefaultTasks();
 
   /* A two-way binding performed which
