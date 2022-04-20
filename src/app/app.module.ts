@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { UserAuthModule } from './user-auth/user-auth.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -8,7 +9,7 @@ import { DefaultTaskServiceService } from './service/default-task-service.servic
 
 @NgModule({
   declarations: [AppComponent, MyTasksComponent],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, UserAuthModule],
   providers: [DefaultTaskServiceService],
   bootstrap: [AppComponent, MyTasksComponent],
 })
